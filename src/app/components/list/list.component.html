@@ -1,0 +1,14 @@
+<div *ngIf="isLoading" class="spinner">
+  <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+</div>
+
+<div *ngIf="!isLoading" class="container">
+  <h1 class="text-center">{{title}}</h1>
+  <div class="text-end">
+    <button (click)="esListado()">Listado</button>
+    <button (click)="esGrid()">Grid</button>
+
+    <app-cards *ngIf="esVistaListado" [cards]="listaImagenes"></app-cards>
+    <app-grid *ngIf="esVistaGrid" [cards]="listaImagenes"></app-grid>
+  </div>
+</div>

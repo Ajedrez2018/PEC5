@@ -1,0 +1,8 @@
+<div
+  *ngFor="let card of cards"
+  class="animate__animated animate__bounce animate__fadeInLeft"
+>
+  <a class="cardLink" [routerLink]="['/card', card.id]">
+    <app-card [card]="card"></app-card>
+  </a>
+</div>
